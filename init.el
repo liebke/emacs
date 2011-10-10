@@ -498,8 +498,8 @@
              (define-key clojure-mode-map "\C-c\C-e" 'lisp-eval-last-sexp)
              (define-key clojure-mode-map "\C-x\C-e" 'lisp-eval-last-sexp)
              ;; Fix the keys that paredit screws up
-             (define-key paredit-mode-map (kbd "<C-left>") nil)
-             (define-key paredit-mode-map (kbd "<C-right>") nil)
+             ;;(define-key paredit-mode-map (kbd "<C-left>") nil)
+             ;;(define-key paredit-mode-map (kbd "<C-right>") nil)
              ;; And define some new bindings since the OS eats some of the useful ones
              (define-key paredit-mode-map (kbd "<C-S-left>") 'paredit-backward-slurp-sexp)
              (define-key paredit-mode-map (kbd "<C-S-right>") 'paredit-forward-slurp-sexp)
@@ -507,7 +507,8 @@
              (define-key paredit-mode-map (kbd "<M-S-right>") 'paredit-forward-barf-sexp)
              ;; Not all terminals can transmit the standard key sequencences for
              ;; paredit-forward-slurp-sexp, which is super-useful
-             (define-key paredit-mode-map (kbd "C-c )") 'paredit-forward-slurp-sexp)))
+             ;;(define-key paredit-mode-map (kbd "C-c )") 'paredit-forward-slurp-sexp)
+             ))
 
 (require 'clojure-test-mode)
 
@@ -877,3 +878,4 @@
 
 (if (functionp 'custom-set-variables-local)
     (custom-set-variables-local))
+

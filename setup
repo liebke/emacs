@@ -29,12 +29,14 @@ mkdir -p ~/.emacs.d
 ln -fs $THIS_DIR ~/.emacs.d/custom
 
 if [ -f ~/.emacs ]; then
-    cp --backup=numbered ~/.emacs ~/your-old.emacs
+    #cp --backup=numbered ~/.emacs ~/your-old.emacs
+    cp ~/.emacs ~/your-old.emacs
     rm -f ~/.emacs
 fi
 
 if [ -f ~/.emacs.d/init.el ]; then
-    cp --backup=numbered ~/.emacs.d/init.el ~/.emacs.d/your-old-init.el
+    #cp --backup=numbered ~/.emacs.d/init.el ~/.emacs.d/your-old-init.el
+    cp ~/.emacs.d/init.el ~/.emacs.d/your-old-init.el
     rm -f ~/.emacs.d/init.el
 fi
 
